@@ -7,12 +7,7 @@ with open("input.txt") as file:
 
 
 def part_0():
-    return sum(
-        [
-            abs(left_val - right_val)
-            for left_val, right_val in zip(sorted(left), sorted(right))
-        ]
-    )
+    return sum([abs(left_val - right_val) for left_val, right_val in zip(sorted(left), sorted(right))])
 
 
 def part_1():
