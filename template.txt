@@ -1,0 +1,14 @@
+from utils import get_input, end_day
+
+input = get_input()
+
+
+def part_0():
+    pass
+
+
+def part_1():
+    pass
+
+
+end_day(part_0, part_1)
