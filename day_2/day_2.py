@@ -11,15 +11,15 @@ def part_0():
 
 
 def part_1():
-    multiplications, state = [], True
+    total_sum, state = 0, True
 
     for match in re.finditer(r"mul\((\d{1,3}),(\d{1,3})\)|do\(\)|don't\(\)", corrupted_memory):
         if state and match.group(0).startswith('mul'):
-            multiplications.append(int(match.group(1)) * int(match.group(2)))
+            total_sum += int(match.group(1)) * int(match.group(2))
         else:
             state = match.group(0) == 'do()'
 
-    return sum(multiplications)
+    return total_sum
 
 
 end_day(part_0, part_1)
